@@ -1,0 +1,71 @@
+body{
+   display:flex;
+   justify-content: center;
+   align-items:center;
+}
+.center
+{
+    width:30vw;
+    height:70vh;
+    margin-top:8vh;
+}
+#Result
+{
+    width:34.5vw;
+    height:15vh;
+    border-radius: 10px;
+    background-color: #181F32;
+}
+#Button
+{
+    width:32vw;
+    height: 65vh;
+    margin-top:3vh;
+    padding-top: 5vh;
+    padding-left:2.5vw;;
+    border-radius:10px;
+    background-color:#252D44;
+}
+.Row
+{
+    font-family: 'League Spartan', sans-serif;
+    font-size:x-large;
+    text-align: center;
+    color: #4D525E;
+    width:30vw;
+    height:10vh;
+    margin-bottom: 3vh;
+}
+.CalcButton
+{
+    display: inline-block;
+    padding-top: 2.5vh;
+    width:6vw;
+    height:6vh;
+    margin-right:1vw;
+    border-radius:10px;
+    box-shadow: 0px 5px #807D7B ;
+    background-color: #EAE3DB;
+}
+.FinalClick
+{
+    padding-top: 2.5vh;
+    display: inline-block;
+    background-color: aquamarine;
+    width:13.5vw;
+    height:6vh;
+    margin-right:1vw;
+    border-radius:10px;
+}
+.blue
+{
+    color: white;
+    background-color: #A2B3E1;
+    box-shadow: 0px 5px  #3F4D71;
+}
+.orange
+{
+    color: white;
+    background-color: #F96C5B;
+    box-shadow: 0px 5px  #933027;
+}
