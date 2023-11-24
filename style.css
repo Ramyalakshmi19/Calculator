@@ -1,8 +1,10 @@
 body{
-   display:flex;
-   justify-content: center;
-   align-items:center;
+    display:flex;
+    justify-content: center;
+    align-items:center;
 }
+
+
 .center
 {
     width:30vw;
@@ -11,9 +13,15 @@ body{
 }
 #Result
 {
-    width:34.5vw;
-    height:15vh;
+    font-family: 'League Spartan', sans-serif;
+    font-size:350%;
+    text-align: right;
+    padding-top:5vh;
+    padding-right:3vw;
+    width:31.5vw;
+    height:10vh;
     border-radius: 10px;
+    color: white;
     background-color: #181F32;
 }
 #Button
