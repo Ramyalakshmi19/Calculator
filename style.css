@@ -1,5 +1,29 @@
+:root{
+    --background:#3F4D71;
+    --resultBg:#181F32;
+    --resultTextClr:white;
+    --buttonBg:#252D44;
+    --buttonTextClr:#4D525E;
+    --buttonShadow:#807D7B ;
+    --numBg:#EAE3DB;
+    --numBgHover:#FFFFFF;
+    --ResetDelBg:#647299;
+    --ResetDelHover:#A2B3E1;
+    --ResetDelShadow:#040405;
+    --EqualToBg:#D13F30;
+    --EqualToHover:#F96C5B;
+    --EqualToShadow:#933027;
+    --ToggleSwitchBg:#252D45;
+    --ToggleBallBg:#F86C5B;
+}
+*
+{
+    font-family: 'League Spartan', sans-serif;
+}
 body{
+    background-color:var(--background);
     display:flex;
+    flex-direction:column;
     justify-content: center;
     align-items:center;
 }
@@ -9,37 +33,35 @@ body{
 {
     width:30vw;
     height:70vh;
-    margin-top:8vh;
+    margin-top:0.5vh;
 }
 #Result
 {
-    font-family: 'League Spartan', sans-serif;
     font-size:350%;
     text-align: right;
     padding-top:5vh;
     padding-right:3vw;
     width:31.5vw;
-    height:10vh;
+    height:9vh;
     border-radius: 10px;
-    color: white;
-    background-color: #181F32;
+    color:var(--resultTextClr);
+    background-color:var(--resultBg);
 }
 #Button
 {
     width:32vw;
     height: 65vh;
-    margin-top:3vh;
+    margin-top:2.5vh;
     padding-top: 5vh;
     padding-left:2.5vw;;
     border-radius:10px;
-    background-color:#252D44;
+    background-color:var(--buttonBg);
 }
 .Row
 {
-    font-family: 'League Spartan', sans-serif;
-    font-size:x-large;
+    font-size:xx-large;
     text-align: center;
-    color: #4D525E;
+    color:var(--buttonTextClr);
     width:30vw;
     height:10vh;
     margin-bottom: 3vh;
@@ -52,14 +74,17 @@ body{
     height:6vh;
     margin-right:1vw;
     border-radius:10px;
-    box-shadow: 0px 5px #807D7B ;
-    background-color: #EAE3DB;
+    box-shadow: 0px 5px var(--buttonShadow);
+    background-color:var(--numBg);
+}
+.CalcButton:hover
+{
+    background-color: var(--numBgHover);
 }
 .FinalClick
 {
     padding-top: 2.5vh;
     display: inline-block;
-    background-color: aquamarine;
     width:13.5vw;
     height:6vh;
     margin-right:1vw;
@@ -68,12 +93,75 @@ body{
 .blue
 {
     color: white;
-    background-color: #A2B3E1;
-    box-shadow: 0px 5px  #3F4D71;
+    background-color:var(--ResetDelBg);
+    box-shadow: 0px 5px var(--ResetDelShadow);
+}
+.blue:hover
+{
+    background-color: var(--ResetDelHover);
 }
 .orange
 {
     color: white;
-    background-color: #F96C5B;
-    box-shadow: 0px 5px  #933027;
+    background-color:var(--EqualToBg);
+    box-shadow: 0px 5px  var(--EqualToShadow);
+}
+.orange:hover
+{
+    background-color: var(--EqualToHover);
+}
+.switch
+{
+    display: flex;
+    justify-content:start;
+    width:4.5vw;
+    height:3vh;
+    border-radius: 15px;
+    padding:1px;
+    background-color:var(--ToggleSwitchBg);
+}
+.ball
+{
+    
+    width:1rem;
+    height:1rem;
+    margin-top:1px;
+    border-radius: 50%;
+    background-color:var(--ToggleBallBg);
+}
+.ThemeGrid
+{
+    display:flex;
+    flex-direction: column;
+    width:11vw;
+    height:10vh;
+    margin-left:27vw;
+}
+.ThemeRow1
+{
+    width:5vw;
+    height:5vh;
+    margin-left:6vw;
+    padding-left:1px;
+    text-align: center;
+}
+.ThemeNum
+{
+    display: inline-block;
+    color:var(--resultTextClr);
+    font-size: small;
+    width:0.8rem;
+    margin-top:1.5vh;
+    margin-left:3px;
+    margin-right:2px;
+}
+.ThemeSwitch
+{
+    letter-spacing: 2px;
+    font-size:medium;
+    color:var(--resultTextClr);
+    display: flex;
+    justify-content: space-between;
+    width:11vw;
+    height:5vh;
 }
