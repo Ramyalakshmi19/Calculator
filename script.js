@@ -3,7 +3,53 @@ let value2="";
 let reset="";
 let operator="";
 let count=-1;
-const root=document.querySelector(":root");
+const root=document.documentElement.style;
+let theme2=
+{
+    "--background":"#E6E6E6",
+    "--resultBg":"#EEEEEE",
+    "--resultTextClr":"#36352D",
+    "--buttonBg":"#D3CECD",
+    "--buttonTextClr":"#37362D",
+    "--buttonShadow":"#A9A198" ,
+    "--numBg":"#E5E4E0",
+    "--numBgHover":"#FFFFFF",
+    "--ResetDelBg":"#388187",
+    "--ResetDelHover":"#62B5BD",
+    "--ResetDelShadow":"#2B666D",
+    "--EqualToBg":"#C85401",
+    "--EqualToHover":"#F96C5B",
+    "--EqualToShadow":"#953F02",
+    "--ToggleSwitchBg":"#D3CDCD",
+    "--ToggleBallBg":"#C85501",
+}
+let theme3=
+{
+    "--background":"#17062A",
+    "--resultBg":"#1E0836",
+    "--resultTextClr":"#FCE440",
+    "--buttonBg":"#1E0836",
+    "--buttonTextClr":"#F2D844",
+    "--buttonShadow":"#7A1F92" ,
+    "--numBg":"#331B4D",
+    "--numBgHover":"#6B34AC",
+    "--ResetDelBg":"#56077C",
+    "--ResetDelHover":"#8631B0",
+    "--ResetDelShadow":"#AE19DF",
+    "--EqualToBg":"#00DECF",
+    "--EqualToHover":"#F96C5B",
+    "--EqualToShadow":"#57F3EA",
+    "--ToggleSwitchBg":"#1E0836",
+    "--ToggleBallBg":"#04DED2",
+}
+function applyTheme(theme)
+{
+    const root=document.documentElement;
+    for(const[property,value] of Object.entries(theme))
+    {
+        root.style.setProperty(property,value);
+    }
+}
 //when del button is clicked, the last stored value is modified and new value is displayed
 document.getElementById('del').addEventListener('click',()=>
 {
@@ -85,15 +131,18 @@ document.getElementById('switchId').addEventListener('click',()=>
     if(count==1)
     {
         document.getElementById('switchId').style.justifyContent="center";
+        applyTheme(theme2);
 
     }
     else if (count==2)
     {
         document.getElementById('switchId').style.justifyContent="end";
+        applyTheme(theme3);
         count=-1;
     }
     else
     {
         document.getElementById('switchId').style.justifyContent="start";
+        root.cssText="";
     }
 })
