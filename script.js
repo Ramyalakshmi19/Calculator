@@ -122,6 +122,10 @@ document.getElementById('EqualTo').addEventListener('click',()=>
             result=Number(value1);   //if equal to is pressed even before the operator is entered, displat value1
     }
     document.getElementById('Result').innerHTML=result;
+    value1=result;
+    value2="";
+    operator="";
+    console.log(value1,value2,operator); 
 }
 )
 document.getElementById('switchId').addEventListener('click',()=>
